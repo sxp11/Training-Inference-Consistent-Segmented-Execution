@@ -1,0 +1,28 @@
+python  finetune.py  \
+        --model_name_or_path /path/to/model \
+        --data_dir /path/to/data\
+        --bf16 True \
+        --output_dir /path/to/output     \
+        --cache_dir cache \
+        --model_max_length 8192 \
+        --num_train_epochs 1  \
+        --per_device_train_batch_size 1     \
+        --gradient_accumulation_steps 8     \
+        --evaluation_strategy "no"     \
+        --save_strategy "steps"     \
+        --save_steps 100     \
+        --save_total_limit 1     \
+        --learning_rate 2e-5     \
+        --weight_decay 0.0     \
+        --warmup_steps 20     \
+        --lr_scheduler_type "constant_with_warmup"     \
+        --logging_steps 5     \
+        --tf32 True \
+        --max_steps 1000  \
+        --segment_length 4096 \
+        --max_length 8192 \
+        --bptt_depth 1 \
+        --logging_strategy steps \
+        --seed 42 \
+        --report_to tensorboard \
+        --ddp_find_unused_parameters False
