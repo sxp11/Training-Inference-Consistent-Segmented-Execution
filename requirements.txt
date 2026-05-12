@@ -1,0 +1,12 @@
+transformers==4.45.0
+datasets==2.19.1
+accelerate==0.34.2
+flash-attn==2.5.8
+einops==0.7.0
+numpy==2.2.6
+packaging==25.0
+tensorboard==2.20.0
+sentencepiece==0.2.0
+safetensors==0.7.0
+tqdm==4.67.1
+protobuf==4.25.3
